@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Jogo da Memoria</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodyJogoDaMemoria">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script charset="utf8">
+  var app = { nrComponentes:0 };
+  app.getComponente = function(nome) {
+    if (!app[nome]) {
+      app[nome] = {};
+      app[app.nrComponentes++] = nome;
+    }
+    return app[nome];
+  };
+</script>
+<div id="topo">
+    <header class="display-Flex-Centralizado">
+        <a href="index.html"><img id="logo" src="img/Logo2certa.jpg" alt="Logo Portal Cunha Gaemes" title="Logo Portal Cunha Gaemes"></a>
+    </header>
+    <nav id="navBarPrincipal">
+        <ul>
+            <li>
+                <div id="divBusca">
+                    <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                    <button id="btnBusca">Buscar</button>
+                </div>
+            </li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="">Entrar</a>
+                <ul>
+                  <li><a href="loginECadastro.html#areaDeLogin">Login</a></li>
+                  <li><a href="loginECadastro.html#areaDeCadastro">Cadastro</a></li>
+                </ul>
+             </li>
+          </ul>
+    </nav>
+</div>
+<div id="jogo">
+  <div id="botoes">
+      <div><button name="inicio" id="botao3d" onclick="DEUS()">Iniciar/Reset</button></div>
+      <div><button name="melhorTempo" id="botao3d" onclick="mostraMelhorTempo()">Melhor Tempo</button></div>
+  </div>
+  <div id="mesa"></div>
+</div>
+
+<footer id="pezin">
+  <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="biblioteca.html">Biblioteca</a></li>
+      <li><a href="loginECadastro.html#areaDeLogin">Login</a></li>
+      <li><a href="loginECadastro.html#areaDeCadastro">Cadastro</a></li>
+      <li><div class="sprites">
+          <a href="https://www.facebook.com/gabriel.cunha.3994"><img class="sprite-fb"></a>
+          <a href="https://twitter.com/"><img class="sprite-tt"></a>
+          <a href="https://br.linkedin.com/"><img class="sprite-in"></a>
+      </div></li>
+    </ul>
+</footer>
+
+<script src="script.js" charset="utf8">
+</script>
+</body>
+</html>
